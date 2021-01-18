@@ -1,0 +1,59 @@
+ 
+ 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>社交平台</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="res/layui/css/layui.css">
+  <link rel="stylesheet" href="res/css/style.css" />
+  <link rel="stylesheet" href="res/css/global.css">
+  <script src="res/js/jquery-1.8.3.js"></script>
+</head>
+<body>
+
+<div id="header"></div>
+
+<div class="fly-panel fly-column">
+  <div class="layui-container">
+    <ul class="layui-clear">
+      <li><a href="index.html">首页</a></li> 
+      <li><a href="message.html">私信</a></li> 
+      <li class="layui-this"><a href="words.html">词汇过滤</a></li>
+    </ul> 
+  </div>
+</div>
+
+<div class="layui-container bg-white">
+  <div class="p20">
+    <div class="breadcrumb"><em></em>当前过滤词汇组：</div>
+    <div class="p10">
+      <a class="mr10"><span class="layui-badge">孙子</span> <span><i class="layui-icon color-red">&#x1006;</i></span></a>
+      <a class="mr10"><span class="layui-badge">大爷</span> <span><i class="layui-icon color-red">&#x1006;</i></span></a>
+      <a class="mr10"><span class="layui-badge">爹</span> <span><i class="layui-icon color-red">&#x1006;</i></span></a>
+      <a class="mr10"><span class="layui-badge">爸爸</span> <span><i class="layui-icon color-red">&#x1006;</i></span></a>
+      <a class="mr10"><span class="layui-badge">爷爷</span> <span><i class="layui-icon color-red">&#x1006;</i></span></a>
+    </div>
+    <div class="breadcrumb mt20"><em></em>添加过滤词汇：</div>
+    <div class="p10">
+      <input name="phone" class="w200" placeholder="请输入敏感词汇">
+      <button class="layui-btn layui-btn-sm">新增</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+$("#header").load("common/header.html");
+$('.msg-item').click(function(){
+  $('.chat-list').hide()
+  $('.chat-content').show()
+})
+$('.back-list').click(function(){
+  $('.chat-list').show()
+  $('.chat-content').hide()
+})
+</script>
+</body>
+</html>

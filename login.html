@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <title>社交平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="res/css/supersized.css" />
+  </head>
+
+  <body>
+    <div class="page-container">
+      <h1 class="title">社交平台</h1>
+      <form action="" method="post">
+        <div>
+          <input type="text" name="username" class="username" placeholder="用户名" autocomplete="off" />
+        </div>
+        <div>
+          <input type="password" name="password" class="password" placeholder="密码" onpaste="return false" />
+        </div>
+        <a class="btn login">登录</a>
+        <a class="btn" href="registe.html">注册</a>
+      </form>
+    </div>
+
+    <script src="res/js/jquery-1.8.3.js" type="text/javascript"></script>
+    <script src="res/js/supersized.3.2.7.min.js"></script>
+    <script src="res/js/layer.js"></script>
+    <script>
+      $(function($) {
+        $.supersized({
+          slide_interval: 6000,
+          transition: 1,
+          transition_speed: 3000,
+          performance: 1,
+          min_width: 0,
+          min_height: 0,
+          vertical_center: 1,
+          horizontal_center: 1,
+          fit_always: 0,
+          fit_portrait: 1,
+          fit_landscape: 0,
+          slide_links: "blank",
+          slides: [{ image: "res/images/login-1.jpg" }, { image: "res/images/login-2.jpg" }, { image: "res/images/login-3.jpg" }]
+        })
+
+        $(".login").click(function() {
+          if (!$(".username").val()) {
+            layer.open({
+              title: "提醒",
+              content: "请输入账号密码"
+            })
+            return false
+          }
+          if (!$(".password").val()) {
+            layer.open({
+              title: "提醒",
+              content: "请输入账号密码"
+            })
+            return false
+          }
+          location.href = "index.html"
+        })
+      })
+    </script>
+  </body>
+</html>
